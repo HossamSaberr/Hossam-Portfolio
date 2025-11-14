@@ -55,7 +55,7 @@ export const portfolioData: PortfolioData = {
       description: "Modern, responsive portfolio website showcasing projects, skills, services, and contact information with smooth animations and professional design.",
       technologies: ["HTML", "CSS", "Responsive Design", "JavaScript"],
       features: ["Multiple sections", "Responsive layout", "Contact form", "Professional animations"],
-      image: "/projects/portfolio-website.png",
+      image: "/projects/portfolio-website.svg",
       githubUrl: "https://github.com/HossamSaberr/portfolio",
       liveUrl: "https://hossamsaberr.dev"
     },
