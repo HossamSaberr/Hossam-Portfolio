@@ -8,6 +8,7 @@ import { Card } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
 import { portfolioData } from '@/data/portfolio';
 import { useScrollAnimation } from '@/utils/animation';
+import { Variants, easeOut, easeInOut } from "framer-motion";
 
 export default function Skills() {
   const [isVisible, setIsVisible] = useState(false);
@@ -23,7 +24,7 @@ export default function Skills() {
       opacity: 1,
       transition: {
         duration: 0.8,
-        ease: "easeOut",
+        ease: easeOut,
         staggerChildren: 0.1
       }
     }
@@ -34,7 +35,7 @@ export default function Skills() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" }
+      transition: { duration: 0.6, ease: easeOut }
     }
   };
 
@@ -43,7 +44,7 @@ export default function Skills() {
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.5, ease: "easeOut" }
+      transition: { duration: 0.5, ease: easeOut }
     }
   };
 
@@ -52,11 +53,11 @@ export default function Skills() {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 0.4, ease: "easeOut" }
+      transition: { duration: 0.4, ease: easeOut }
     },
     hover: {
       scale: 1.05,
-      transition: { duration: 0.2, ease: "easeOut" }
+      transition: { duration: 0.2, ease: easeOut }
     }
   };
 
@@ -200,7 +201,7 @@ export default function Skills() {
                           transition={{
                             duration: 1.5,
                             delay: index * 0.2,
-                            ease: "easeOut"
+                            ease: easeOut
                           }}
                         />
                       </div>
@@ -284,7 +285,7 @@ export default function Skills() {
                           transition={{
                             duration: 1.5,
                             delay: index * 0.2,
-                            ease: "easeOut"
+                            ease: easeOut
                           }}
                         />
                         <defs>
