@@ -49,22 +49,16 @@ export async function POST(request: NextRequest) {
 
     // Validate input
     const validationResult = contactSchema.safeParse(body);
+
     if (!validationResult.success) {
-      const errors = validationResult.error.errors.map(err => ({
-        field: err.path.join('.'),
+      const errors = validationResult.error.issues.map(err => ({
+        field: err.path.join("."),
         message: err.message,
       }));
-
+    
       return NextResponse.json(
-        {
-          success: false,
-          error: 'Validation failed',
-          details: errors,
-        },
-        {
-          status: 400,
-          headers: RATE_LIMIT_HEADERS,
-        }
+        { success: false, errors },
+        { status: 400 }
       );
     }
 
