@@ -11,6 +11,7 @@ import { useScrollAnimation, useAnimatedCounter } from '@/utils/animation';
 export default function About() {
   const [isVisible, setIsVisible] = useState(false);
   const { ref, isVisible: isSectionVisible } = useScrollAnimation(0.2);
+const easeOut = [0.25, 0.1, 0.25, 1];
 
   useEffect(() => {
     setIsVisible(true);
