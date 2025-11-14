@@ -32,7 +32,7 @@ const Achievements = () => {
   }, []);
 
   const getAchievementIcon = (achievement: typeof portfolioData.achievements[0]) => {
-    const iconMap: { [key: string]: JSX.Element } = {
+    const iconMap: { [key: string]: React.ReactElement } = {
       'ACPC Finalist 2025': (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
           <path fillRule="evenodd" d="M5.868 2.501c.796-1.031 2.331-1.031 3.127 0l2.54 3.292A1 1 0 0011.804 6h1.392a1 1 0 00.77-.36l2.54-3.292c.796-1.031 2.331-1.031 3.127 0l1.743 2.259a2 2 0 010 2.48L19.75 9.5a1 1 0 01-.77.36H18.3a1 1 0 00-.832.445l-2.98 4.484a2 2 0 000 2.142l1.985 2.99a1 1 0 00.832.445H19a1 1 0 01.77.36l1.743 2.259a2 2 0 010 2.48l-1.743 2.259c-.796 1.031-2.331 1.031-3.127 0l-2.54-3.292a1 1 0 00-.77-.36h-1.392a1 1 0 00-.77.36l-2.54 3.292c-.796 1.031-2.331 1.031-3.127 0L4.125 19.74a2 2 0 010-2.48L6.109 14.27a2 2 0 000-2.142l-2.98-4.484A1 1 0 002.295 7H1.25a1 1 0 01-.77-.36L-1.263 4.38a2 2 0 010-2.48L.48 2.501z" clipRule="evenodd"/>
