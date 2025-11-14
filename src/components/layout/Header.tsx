@@ -6,6 +6,7 @@ import { Menu, X, Github, ExternalLink, Code } from 'lucide-react';
 import { navigationItems } from '@/data/portfolio';
 import { useScrollspy } from '@/components/hooks/useScrollspy';
 import { smoothScroll } from '@/utils/animation';
+import { Variants } from "framer-motion";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -43,7 +44,7 @@ export default function Header() {
     setIsMenuOpen(false);
   };
 
-  const headerVariants = {
+const headerVariants: Variants = {
     hidden: { y: -100, opacity: 0 },
     visible: {
       y: 0,
@@ -52,7 +53,7 @@ export default function Header() {
     }
   };
 
-  const mobileMenuVariants = {
+  const mobileMenuVariants: Variants = {
     hidden: { opacity: 0, scale: 0.95 },
     visible: {
       opacity: 1,
