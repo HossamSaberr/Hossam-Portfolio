@@ -5,6 +5,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Github, Code, ExternalLink, Mail, Phone, ArrowUp } from 'lucide-react';
 import { portfolioData } from '@/data/portfolio';
 import { smoothScroll } from '@/utils/animation';
+import { Variants } from "framer-motion";
+
 
 export default function Footer() {
   const [showBackToTop, setShowBackToTop] = useState(false);
