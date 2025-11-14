@@ -316,7 +316,7 @@ export default function Hero() {
                       <span className="text-yellow-400">return</span> <span className="text-green-400">0</span>;
                     </motion.div>
                     <motion.div variants={codeLineVariants} className="text-blue-400">
-                      }
+                      `{'}'}`
                     </motion.div>
                   </div>
                 </motion.div>
