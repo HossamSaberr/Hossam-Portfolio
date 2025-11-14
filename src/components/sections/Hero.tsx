@@ -8,6 +8,7 @@ import { Badge } from '@/components/ui/Badge';
 import { portfolioData } from '@/data/portfolio';
 import { useTypewriter } from '@/utils/animation';
 import { smoothScroll } from '@/utils/animation';
+import { Variants, easeOut, easeInOut } from "framer-motion";
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false);
@@ -27,7 +28,7 @@ export default function Hero() {
       opacity: 1,
       transition: {
         duration: 0.8,
-        ease: "easeOut",
+        ease: easeOut,
         staggerChildren: 0.2
       }
     }
@@ -38,7 +39,7 @@ export default function Hero() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" }
+      transition: { duration: 0.6, ease: easeOut }
     }
   };
 
@@ -49,7 +50,7 @@ export default function Hero() {
       transition: {
         duration: 6,
         repeat: Infinity,
-        ease: "easeInOut"
+        ease: easeInOut
       }
     }
   };
@@ -61,7 +62,7 @@ export default function Hero() {
       scale: 1,
       transition: {
         duration: 1,
-        ease: "easeOut",
+        ease: easeOut,
         staggerChildren: 0.1
       }
     }
@@ -72,7 +73,7 @@ export default function Hero() {
     animate: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.5, ease: "easeOut" }
+      transition: { duration: 0.5, ease: easeOut }
     }
   };
 
@@ -103,7 +104,7 @@ export default function Hero() {
           transition={{
             duration: 20,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: easeInOut
           }}
         />
         <motion.div
@@ -115,7 +116,7 @@ export default function Hero() {
           transition={{
             duration: 25,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: easeInOut
           }}
         />
       </div>
@@ -331,7 +332,7 @@ export default function Hero() {
                   transition={{
                     duration: 4,
                     repeat: Infinity,
-                    ease: "easeInOut"
+                    ease: easeInOut
                   }}
                 >
                   <Code2 size={32} className="text-blue-400" />
@@ -346,7 +347,7 @@ export default function Hero() {
                   transition={{
                     duration: 3,
                     repeat: Infinity,
-                    ease: "easeInOut"
+                    ease: easeInOut
                   }}
                 >
                   <Trophy size={24} className="text-cyan-400" />
@@ -372,7 +373,7 @@ export default function Hero() {
                 transition={{
                   duration: 2,
                   repeat: Infinity,
-                  ease: "easeInOut"
+                  ease: easeInOut
                 }}
               >
                 <ArrowDown size={20} />
