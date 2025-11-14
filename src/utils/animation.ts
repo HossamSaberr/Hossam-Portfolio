@@ -6,7 +6,8 @@ export function useScrollAnimation(
   rootMargin: string = '0px 0px -50px 0px'
 ) {
   const [isVisible, setIsVisible] = useState(false);
-  const ref = useRef<HTMLElement>(null);
+  const ref = useRef<HTMLDivElement | null>(null);
+
 
   useEffect(() => {
     const currentRef = ref.current;
