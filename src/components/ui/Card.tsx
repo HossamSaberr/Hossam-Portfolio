@@ -2,7 +2,7 @@ import React from 'react';
 import { cn } from '@/lib/utils';
 
 interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
-  variant?: 'default' | 'glass' | 'elevated' | 'outlined';
+  variant?: 'default' | 'glass' | 'elevated' | 'outlined' | 'outline';
   hover?: boolean;
   children: React.ReactNode;
 }
