@@ -52,7 +52,7 @@ const backToTopVariants: Variants = {
     y: 0,
     transition: {
       duration: 0.5,
-      ease: "easeInOut", /
+      ease: "easeInOut", 
     },
   },
   hover: {
