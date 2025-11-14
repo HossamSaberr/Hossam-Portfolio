@@ -7,39 +7,40 @@ import { Section } from '@/components/ui/Section';
 import { Card } from '@/components/ui/Card';
 import { portfolioData } from '@/data/portfolio';
 import { useScrollAnimation, useAnimatedCounter } from '@/utils/animation';
+import { Variants, Transition } from "framer-motion";
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
       duration: 0.8,
-      ease: [0.25, 0.1, 0.25, 1],
+      ease: [0.25, 0.1, 0.25, 1] as Transition["ease"],
       staggerChildren: 0.3
     }
   }
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
       duration: 0.6,
-      ease: [0.25, 0.1, 0.25, 1]
+      ease: [0.25, 0.1, 0.25, 1] as Transition["ease"],
     }
   }
 };
 
-const statVariants = {
+const statVariants: Variants = {
   hidden: { opacity: 0, scale: 0.8 },
   visible: {
     opacity: 1,
     scale: 1,
     transition: {
       duration: 0.5,
-      ease: [0.25, 0.1, 0.25, 1]
+      ease: [0.25, 0.1, 0.25, 1] as Transition["ease"],
     }
   }
 };
