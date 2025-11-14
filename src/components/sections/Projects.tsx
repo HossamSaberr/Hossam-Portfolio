@@ -257,7 +257,6 @@ export default function Projects() {
                         variant="secondary"
                         size="sm"
                         className="flex-1 group"
-                        asChild
                       >
                         <a
                           href={project.githubUrl}
