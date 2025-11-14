@@ -37,7 +37,7 @@ const Projects = () => {
 
   const filteredProjects = selectedCategory === 'all'
     ? portfolioData.projects
-    : portfolioData.projects.filter(project => project.category === selectedCategory);
+    : portfolioData.projects.filter(project => (project.category || 'Other') === selectedCategory);
 
   const getProjectImage = (project: typeof portfolioData.projects[0]) => {
     // Placeholder images based on project type
