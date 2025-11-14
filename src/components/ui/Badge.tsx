@@ -39,7 +39,7 @@ const badgeVariants = cva(
 interface BadgeProps
   extends HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof badgeVariants> {
-  children: ReactNode;
+  children?: ReactNode;
   icon?: ReactNode;
 }
 
