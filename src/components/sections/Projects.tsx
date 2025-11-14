@@ -122,50 +122,55 @@ export default function Projects() {
               >
                 {/* Project Image */}
                 <div className="relative h-48 overflow-hidden bg-gradient-to-br from-zinc-800 to-zinc-900">
-                  {/* Placeholder image with project icon */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="relative">
-                      <motion.div
-                        className={`p-6 rounded-2xl bg-gradient-to-br ${projectColors[project.title as keyof typeof projectColors]} backdrop-blur-sm border`}
-                        animate={{
-                          rotate: [0, 5, -5, 0],
-                        }}
-                        transition={{
-                          duration: 6,
-                          repeat: Infinity,
-                          ease: "easeInOut"
-                        }}
-                      >
-                        {getProjectIcon(project.title)}
-                      </motion.div>
+                  {/* SVG Project Image */}
+                  <img
+                    src={project.image}
+                    alt={`${project.title} preview`}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
 
-                      {/* Decorative elements */}
-                      <motion.div
-                        className="absolute -top-2 -right-2 w-4 h-4 bg-blue-500 rounded-full opacity-60"
-                        animate={{
-                          scale: [1, 1.5, 1],
-                          opacity: [0.6, 1, 0.6],
-                        }}
-                        transition={{
-                          duration: 2,
-                          repeat: Infinity,
-                          ease: "easeInOut"
-                        }}
-                      />
-                      <motion.div
-                        className="absolute -bottom-1 -left-1 w-3 h-3 bg-cyan-500 rounded-full opacity-40"
-                        animate={{
-                          scale: [1, 1.3, 1],
-                          opacity: [0.4, 0.8, 0.4],
-                        }}
-                        transition={{
-                          duration: 2.5,
-                          repeat: Infinity,
-                          ease: "easeInOut",
-                          delay: 0.5
-                        }}
-                      />
-                    </div>
+                  {/* Overlay with project icon */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/90 via-transparent to-transparent flex items-center justify-center">
+                    <motion.div
+                      className={`p-6 rounded-2xl bg-gradient-to-br ${projectColors[project.title as keyof typeof projectColors]} backdrop-blur-sm border`}
+                      animate={{
+                        rotate: [0, 5, -5, 0],
+                      }}
+                      transition={{
+                        duration: 6,
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                      }}
+                    >
+                      {getProjectIcon(project.title)}
+                    </motion.div>
+
+                    {/* Decorative elements */}
+                    <motion.div
+                      className="absolute -top-2 -right-2 w-4 h-4 bg-blue-500 rounded-full opacity-60"
+                      animate={{
+                        scale: [1, 1.5, 1],
+                        opacity: [0.6, 1, 0.6],
+                      }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                      }}
+                    />
+                    <motion.div
+                      className="absolute -bottom-1 -left-1 w-3 h-3 bg-cyan-500 rounded-full opacity-40"
+                      animate={{
+                        scale: [1, 1.3, 1],
+                        opacity: [0.4, 0.8, 0.4],
+                      }}
+                      transition={{
+                        duration: 2.5,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                        delay: 0.5
+                      }}
+                    />
                   </div>
 
                   {/* Overlay with gradient */}
