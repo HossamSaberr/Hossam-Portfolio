@@ -147,7 +147,7 @@ export default function About() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {portfolioData.personalInfo.statistics.map((stat, index) => {
-                const IconComponent = iconMap[stat.label] || Award;
+                const IconComponent = iconMap[stat.label as keyof typeof iconMap] || Award;
 
                 const { displayValue } = useAnimatedCounter(
                   stat.value,
