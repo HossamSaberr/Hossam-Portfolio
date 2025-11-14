@@ -11,6 +11,7 @@ export interface PersonalInfo {
 }
 
 export interface Skill {
+  id?: string;
   name: string;
   level: 'Beginner' | 'Intermediate' | 'Advanced' | 'Expert';
   category: 'languages' | 'concepts' | 'other';
