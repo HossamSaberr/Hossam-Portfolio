@@ -8,6 +8,7 @@ import { PlatformBadge, AchievementBadge } from '@/components/ui/Badge';
 import { portfolioData } from '@/data/portfolio';
 import { useScrollAnimation } from '@/utils/animation';
 import { Variants, Transition } from "framer-motion";
+import { easeOut } from "framer-motion";
 
 export default function Achievements() {
   const [isVisible, setIsVisible] = useState(false);
@@ -46,12 +47,12 @@ export default function Achievements() {
       opacity: 1,
       scale: 1,
       rotate: 0,
-      transition: { duration: 0.5, ease: "easeOut" }
+      transition: { duration: 0.5, ease: easeOut }
     },
     hover: {
       scale: 1.1,
       rotate: 5,
-      transition: { duration: 0.2, ease: "easeOut" }
+      transition: { duration: 0.2, ease: easeOut }
     }
   };
 
