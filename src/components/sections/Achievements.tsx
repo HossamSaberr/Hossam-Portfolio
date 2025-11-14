@@ -230,10 +230,8 @@ export default function Achievements() {
 
                 {/* Platform Badge */}
                 <div className="relative z-10 mb-3">
-                  <PlatformBadge
-                    platform={achievement.platform}
-                    className="mx-auto"
-                  />
+                  <PlatformBadge platform={achievement.platform} className="mx-auto">
+                  </PlatformBadge>
                 </div>
 
                 {/* Rating Display (if applicable) */}
