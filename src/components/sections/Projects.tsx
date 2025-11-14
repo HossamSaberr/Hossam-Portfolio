@@ -33,7 +33,7 @@ const Projects = () => {
     };
   }, []);
 
-  const categories = ['all', ...new Set(portfolioData.projects.map(project => project.category))];
+  const categories = ['all', ...new Set(portfolioData.projects.map(project => project.category || 'Other'))];
 
   const filteredProjects = selectedCategory === 'all'
     ? portfolioData.projects
