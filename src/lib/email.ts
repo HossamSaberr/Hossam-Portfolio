@@ -24,10 +24,10 @@ const createTransporter = () => {
     throw new Error('SMTP credentials are not configured');
   }
 
-  return nodemailer.createTransporter({
+  rreturn nodemailer.createTransport({
     host: SMTP_HOST,
     port: SMTP_PORT,
-    secure: SMTP_PORT === 465, // true for 465, false for other ports
+    secure: SMTP_PORT === 465,
     auth: {
       user: SMTP_USER,
       pass: SMTP_PASS,
