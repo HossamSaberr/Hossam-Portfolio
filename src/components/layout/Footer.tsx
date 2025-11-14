@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Github, Code, ExternalLink, Mail, Phone, ArrowUp } from 'lucide-react';
 import { portfolioData } from '@/data/portfolio';
 import { smoothScroll } from '@/utils/animation';
