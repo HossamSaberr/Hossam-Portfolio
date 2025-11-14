@@ -8,6 +8,7 @@ import { Card } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
 import { portfolioData } from '@/data/portfolio';
 import { useScrollAnimation } from '@/utils/animation';
+import { Variants, easeInOut, easeOut } from "framer-motion";
 
 export default function Experience() {
   const [isVisible, setIsVisible] = useState(false);
@@ -23,7 +24,7 @@ export default function Experience() {
       opacity: 1,
       transition: {
         duration: 0.8,
-        ease: "easeOut",
+        ease: easeOut,
         staggerChildren: 0.3
       }
     }
@@ -34,7 +35,7 @@ export default function Experience() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" }
+      transition: { duration: 0.6, ease: easeOut }
     }
   };
 
@@ -42,7 +43,7 @@ export default function Experience() {
     hidden: { scaleY: 0, transformOrigin: 'top' },
     visible: {
       scaleY: 1,
-      transition: { duration: 1, ease: "easeOut" }
+      transition: { duration: 1, ease: easeOut }
     }
   };
 
@@ -51,11 +52,11 @@ export default function Experience() {
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.5, ease: "easeOut" }
+      transition: { duration: 0.5, ease: easeOut }
     },
     hover: {
       x: 10,
-      transition: { duration: 0.2, ease: "easeOut" }
+      transition: { duration: 0.2, ease: easeOut }
     }
   };
 
