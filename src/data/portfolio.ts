@@ -45,7 +45,7 @@ export const portfolioData: PortfolioData = {
       description: "Comprehensive library management application with book tracking, member management, and user-friendly GUI built using Java Swing and object-oriented programming principles.",
       technologies: ["Java", "OOP", "GUI (Java Swing)"],
       features: ["Book management system", "Member tracking", "User-friendly interface", "Database integration"],
-      image: "/projects/library-management.png",
+      image: "/projects/library-management.svg",
       githubUrl: "https://github.com/HossamSaberr/library-management",
       liveUrl: null
     },
