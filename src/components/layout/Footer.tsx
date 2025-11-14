@@ -31,7 +31,7 @@ export default function Footer() {
     linkedin: ExternalLink,
   };
 
-  const footerVariants = {
+  const footerVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
@@ -41,7 +41,7 @@ export default function Footer() {
       ease: "easeInOut",
     },
   },
-} as Variants;
+};
 
 
 
