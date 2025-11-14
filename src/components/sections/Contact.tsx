@@ -13,6 +13,7 @@ import { Badge } from '@/components/ui/Badge';
 import { portfolioData } from '@/data/portfolio';
 import { useScrollAnimation } from '@/utils/animation';
 import { ContactForm } from '@/types/portfolio';
+import { Variants, easeInOut } from "framer-motion";
 
 // Form validation schema
 const contactFormSchema = z.object({
@@ -50,7 +51,7 @@ export default function Contact() {
       opacity: 1,
       transition: {
         duration: 0.8,
-        ease: "easeOut",
+        ease: easeOut,
         staggerChildren: 0.2
       }
     }
@@ -61,7 +62,7 @@ export default function Contact() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" }
+      transition: { duration: 0.6, ease: easeOut }
     }
   };
 
