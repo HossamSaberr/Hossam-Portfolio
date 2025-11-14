@@ -65,7 +65,7 @@ export const portfolioData: PortfolioData = {
       description: "Official community website featuring training resources, events, and competitive programming content to support and grow the programming community.",
       technologies: ["Material for MkDocs", "Markdown", "Git"],
       features: ["Training plans", "Event recordings", "Resource library", "Community forums"],
-      image: "/projects/icpc-community.png",
+      image: "/projects/icpc-community.svg",
       githubUrl: "https://github.com/ICPC-Menofia/community-website",
       liveUrl: "https://icpc-menofia.github.io"
     }
