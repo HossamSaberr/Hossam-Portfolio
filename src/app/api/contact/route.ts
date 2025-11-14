@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
-import { sendContactEmail, checkRateLimit } from '@/lib/email';
+import { sendContactEmail, checkRateLimit, rateLimitMap } from '@/lib/email';
 
 // Input validation schema
 const contactSchema = z.object({
