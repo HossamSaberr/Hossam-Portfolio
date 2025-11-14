@@ -8,44 +8,49 @@ import { Card } from '@/components/ui/Card';
 import { portfolioData } from '@/data/portfolio';
 import { useScrollAnimation, useAnimatedCounter } from '@/utils/animation';
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.8,
+      ease: [0.25, 0.1, 0.25, 1],
+      staggerChildren: 0.3
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: [0.25, 0.1, 0.25, 1]
+    }
+  }
+};
+
+const statVariants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.5,
+      ease: [0.25, 0.1, 0.25, 1]
+    }
+  }
+};
+
 export default function About() {
   const [isVisible, setIsVisible] = useState(false);
   const { ref, isVisible: isSectionVisible } = useScrollAnimation(0.2);
-const easeOut = [0.25, 0.1, 0.25, 1];
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut",
-        staggerChildren: 0.3
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" }
-    }
-  };
-
-  const statVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: { duration: 0.5, ease: "easeOut" }
-    }
-  };
 
   const iconMap = {
     'Algorithmic Problems Solved': Code,
@@ -71,37 +76,25 @@ const easeOut = [0.25, 0.1, 0.25, 1];
         animate={isSectionVisible ? "visible" : "hidden"}
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
           {/* Bio Content */}
-          <motion.div
-            className="space-y-6"
-            variants={itemVariants}
-          >
+          <motion.div className="space-y-6" variants={itemVariants}>
             <div className="prose prose-invert prose-lg max-w-none">
               <p className="text-zinc-300 leading-relaxed">
-                I am a passionate competitive programmer and software developer with a strong foundation in
-                algorithmic problem solving and software engineering. My journey began with a curiosity for
-                how things work and evolved into a deep love for creating efficient solutions to complex problems.
+                I am a passionate competitive programmer and software developer...
               </p>
 
               <p className="text-zinc-300 leading-relaxed">
-                As an ACPC Finalist and ICPC Problem Setter, I have solved over 4000 algorithmic problems
-                and achieved Expert rating on Codeforces. My experience extends beyond competitive programming
-                into community leadership, where I've had the privilege of mentoring over 500 students in
-                competitive programming and leading development teams in technical communities.
+                As an ACPC Finalist and ICPC Problem Setter...
               </p>
 
               <p className="text-zinc-300 leading-relaxed">
-                I believe in the power of continuous learning and sharing knowledge. Whether it's through
-                mentoring aspiring programmers, organizing community events, or developing innovative software,
-                I am dedicated to making a positive impact on the programming community and beyond.
+                I believe in the power of continuous learning...
               </p>
             </div>
 
-            {/* Education Card */}
-            <motion.div
-              variants={itemVariants}
-              transition={{ delay: 0.2 }}
-            >
+            {/* Education */}
+            <motion.div variants={itemVariants} transition={{ delay: 0.2 }}>
               <Card variant="glass" className="p-6 space-y-4">
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="p-2 bg-blue-600/20 rounded-lg">
@@ -119,6 +112,7 @@ const easeOut = [0.25, 0.1, 0.25, 1];
                       {portfolioData.personalInfo.education.degree}
                     </p>
                   </div>
+
                   <div className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-green-400 rounded-full" />
                     <span className="text-zinc-400">
@@ -129,11 +123,8 @@ const easeOut = [0.25, 0.1, 0.25, 1];
               </Card>
             </motion.div>
 
-            {/* Personal Philosophy */}
-            <motion.div
-              variants={itemVariants}
-              transition={{ delay: 0.4 }}
-            >
+            {/* Philosophy */}
+            <motion.div variants={itemVariants} transition={{ delay: 0.4 }}>
               <Card variant="glass" className="p-6">
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="p-2 bg-yellow-600/20 rounded-lg">
@@ -143,24 +134,20 @@ const easeOut = [0.25, 0.1, 0.25, 1];
                 </div>
 
                 <blockquote className="text-zinc-300 italic border-l-4 border-blue-500 pl-4">
-                  "Every problem is an opportunity to learn, every challenge is a chance to grow,
-                  and every success is a motivation to help others achieve their goals."
+                  "Every problem is an opportunity to learn..."
                 </blockquote>
               </Card>
             </motion.div>
           </motion.div>
 
-          {/* Statistics */}
-          <motion.div
-            className="space-y-6"
-            variants={itemVariants}
-            transition={{ delay: 0.3 }}
-          >
+          {/* Stats */}
+          <motion.div className="space-y-6" variants={itemVariants} transition={{ delay: 0.3 }}>
             <h3 className="text-2xl font-bold text-zinc-100 mb-6">Key Achievements</h3>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {portfolioData.personalInfo.statistics.map((stat, index) => {
-                const IconComponent = iconMap[stat.label as keyof typeof iconMap] || Award;
+                const IconComponent = iconMap[stat.label] || Award;
+
                 const { displayValue } = useAnimatedCounter(
                   stat.value,
                   2000,
@@ -179,18 +166,16 @@ const easeOut = [0.25, 0.1, 0.25, 1];
                       className="p-6 text-center group hover:border-blue-500/30 transition-all duration-300"
                     >
                       <div className="flex flex-col items-center space-y-4">
+
                         <div className="p-3 bg-blue-600/20 rounded-full group-hover:bg-blue-600/30 transition-colors">
                           <IconComponent size={32} className="text-blue-400" />
                         </div>
 
                         <div className="space-y-2">
-                          <div className="text-3xl font-bold gradient-text">
-                            {displayValue}
-                          </div>
-                          <p className="text-sm text-zinc-300 leading-tight">
-                            {stat.label}
-                          </p>
+                          <div className="text-3xl font-bold gradient-text">{displayValue}</div>
+                          <p className="text-sm text-zinc-300 leading-tight">{stat.label}</p>
                         </div>
+
                       </div>
                     </Card>
                   </motion.div>
@@ -199,42 +184,21 @@ const easeOut = [0.25, 0.1, 0.25, 1];
             </div>
 
             {/* Community Impact */}
-            <motion.div
-              variants={itemVariants}
-              transition={{ delay: 0.6 }}
-            >
+            <motion.div variants={itemVariants} transition={{ delay: 0.6 }}>
               <Card variant="elevated" className="p-6">
                 <h4 className="text-xl font-semibold text-zinc-100 mb-4">Community Impact</h4>
 
                 <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0" />
-                    <div>
-                      <p className="text-zinc-300">Mentored 500+ students in competitive programming</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0" />
-                    <div>
-                      <p className="text-zinc-300">Created 50+ original programming problems</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0" />
-                    <div>
-                      <p className="text-zinc-300">Organized scientific events with top industry speakers</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0" />
-                    <div>
-                      <p className="text-zinc-300">Grew community engagement by 300%</p>
-                    </div>
-                  </div>
+                  <p className="text-zinc-300">Mentored 500+ students</p>
+                  <p className="text-zinc-300">Created 50+ programming problems</p>
+                  <p className="text-zinc-300">Organized scientific events</p>
+                  <p className="text-zinc-300">Grew community engagement by 300%</p>
                 </div>
               </Card>
             </motion.div>
+
           </motion.div>
+
         </div>
       </motion.div>
     </Section>
