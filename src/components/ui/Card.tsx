@@ -15,7 +15,8 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
       default: "bg-zinc-900 border border-zinc-800",
       glass: "glass border border-zinc-800/50",
       elevated: "bg-zinc-900 border border-zinc-800 shadow-lg",
-      outlined: "bg-transparent border-2 border-zinc-700"
+      outlined: "bg-transparent border-2 border-zinc-700",
+      outline: "bg-transparent border-2 border-zinc-700"
     };
 
     const hoverStyles = hover ? "hover:bg-zinc-800 hover:shadow-xl hover:shadow-zinc-800/50 hover:border-zinc-700 hover:scale-[1.02]" : "";
