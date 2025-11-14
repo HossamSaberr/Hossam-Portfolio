@@ -255,3 +255,6 @@ setInterval(() => {
     }
   }
 }, RATE_LIMIT_WINDOW);
+
+// Export the rate limit map for use in API route
+export { rateLimitMap };
