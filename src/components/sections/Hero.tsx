@@ -298,7 +298,7 @@ export default function Hero() {
                     </motion.div>
                     <div className="h-2" />
                     <motion.div variants={codeLineVariants} className="text-blue-400">
-                      <span className="text-yellow-400">int</span> main() {
+                      <span className="text-yellow-400">int</span> {` main() {`}
                     </motion.div>
                     <motion.div variants={codeLineVariants} className="ml-4 text-green-400">
                       solve();
