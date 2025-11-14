@@ -44,21 +44,23 @@ export default function Footer() {
 };
 
 
-
-
-  const backToTopVariants = {
-    hidden: { opacity: 0, scale: 0.8, y: 20 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      y: 0,
-      transition: { duration: 0.3, ease: "easeOut" }
+const backToTopVariants: Variants = {
+  hidden: { opacity: 0, scale: 0.8, y: 20 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeInOut", /
     },
-    hover: {
-      scale: 1.1,
-      transition: { duration: 0.2 }
-    }
-  };
+  },
+  hover: {
+    scale: 1.1,
+    transition: { duration: 0.2 },
+  },
+};
+
 
   return (
     <footer className="relative bg-zinc-950 border-t border-zinc-800">
