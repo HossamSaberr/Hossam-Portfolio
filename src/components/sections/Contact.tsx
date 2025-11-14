@@ -13,7 +13,8 @@ import { Badge } from '@/components/ui/Badge';
 import { portfolioData } from '@/data/portfolio';
 import { useScrollAnimation } from '@/utils/animation';
 import { ContactForm } from '@/types/portfolio';
-import { Variants, easeInOut } from "framer-motion";
+import { Variants, easeOut } from "framer-motion";
+
 
 // Form validation schema
 const contactFormSchema = z.object({
