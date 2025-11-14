@@ -328,7 +328,6 @@ export default function Projects() {
             <Button
               variant="outline"
               size="md"
-              asChild
               className="group"
             >
               <a
