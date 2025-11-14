@@ -275,7 +275,6 @@ export default function Projects() {
                         variant="primary"
                         size="sm"
                         className="flex-1 group"
-                        asChild
                       >
                         <a
                           href={project.liveUrl}
