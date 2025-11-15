@@ -1,8 +1,8 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, Book, Globe, Code, Users, Eye } from 'lucide-react';
+import { ExternalLink, Github, Book, Globe, Code, Code2, Users, FolderTree, Eye, Monitor, Database, Coffee, DatabaseBackup, GitPullRequestArrow } from 'lucide-react';
 import { Section } from '@/components/ui/Section';
 import { Card } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
@@ -61,16 +61,16 @@ export default function Projects() {
   };
 
   const iconMap: Record<string, React.ReactNode> = {
-    'Java': <Code size={20} />,
-    'OOP': <Book size={20} />,
-    'GUI (Java Swing)': <Code size={20} />,
+    'Java': <Coffee size={20} />,
+    'OOP': <Database size={20} />,
+    'GUI (Java Swing)': <Monitor size={20} />,
+    'In-Memory Storage': <DatabaseBackup size={20} />,
     'HTML': <Globe size={20} />,
-    'CSS': <Book size={20} />,
+    'CSS': <Code2 size={20} />,
     'Responsive Design': <Eye size={20} />,
-    'JavaScript': <Code size={20} />,
-    'Material for MkDocs': <Book size={20} />,
+    'JavaScript': <Code2 size={20} />,
     'Markdown': <Book size={20} />,
-    'Git': <Code size={20} />,
+    'Git': <GitPullRequestArrow size={20} />,
   };
 
   const projectColors = {
@@ -102,7 +102,7 @@ export default function Projects() {
       background="primary"
     >
       <motion.div
-        ref={ref}
+        ref={ref as React.Ref<HTMLDivElement>}
         className="max-w-7xl mx-auto"
         variants={containerVariants}
         initial="hidden"
@@ -197,8 +197,8 @@ export default function Projects() {
                   </p>
 
                   {/* Technologies */}
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.slice(0, 3).map((tech) => (
+                  <div className="flex flex-wrap gap-1">
+                    {project.technologies.slice(0, 4).map((tech) => (
                       <Badge
                         key={tech}
                         variant="skill"
@@ -209,13 +209,13 @@ export default function Projects() {
                         <span className="ml-1">{tech}</span>
                       </Badge>
                     ))}
-                    {project.technologies.length > 3 && (
+                    {project.technologies.length > 4 && (
                       <Badge
                         variant="skill"
                         size="sm"
                         className="bg-zinc-800/50 text-zinc-400 border-zinc-700"
                       >
-                        +{project.technologies.length - 3}
+                        +{project.technologies.length - 4}
                       </Badge>
                     )}
                   </div>
@@ -313,34 +313,35 @@ export default function Projects() {
         </div>
 
         {/* Call to Action */}
-        <motion.div
-          className="text-center mt-16"
-          variants={itemVariants}
-          transition={{ delay: 0.6 }}
-        >
-          <div className="inline-flex flex-col sm:flex-row items-center gap-4 p-6 bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-xl">
-            <div className="flex items-center space-x-3">
-              <Github size={24} className="text-blue-400" />
-              <span className="text-zinc-300">
-                Interested in seeing more projects?
-              </span>
-            </div>
-            <Button
-              variant="outline"
-              size="md"
-              className="group"
+          <motion.div
+            className="text-center mt-16"
+            variants={itemVariants}
+            transition={{ delay: 0.6 }}
             >
-              <a
-                href="https://github.com/HossamSaberr"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Visit My GitHub
-                <ExternalLink size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
-              </a>
-            </Button>
-          </div>
-        </motion.div>
+            <div className="inline-flex flex-row items-center gap-4 p-6 bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-xl">
+              <div className="flex items-center space-x-3">
+                <Github size={24} className="text-blue-400" />
+                <span className="text-zinc-300">
+                  Interested in seeing more projects?
+                </span>
+              </div>
+
+              <Button variant="outline" size="md" className="group">
+                <a
+                  href="https://github.com/HossamSaberr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center"
+                >
+                  Visit My GitHub
+                  <ExternalLink
+                    size={16}
+                    className="ml-2 group-hover:translate-x-1 transition-transform"
+                  />
+                </a>
+              </Button>
+            </div>
+          </motion.div>
       </motion.div>
     </Section>
   );

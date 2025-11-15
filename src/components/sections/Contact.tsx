@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { Mail, Phone, Send, Github, Code, ExternalLink, CheckCircle, AlertCircle, MessageSquare } from 'lucide-react';
+import { Facebook , Code2 , Linkedin, Menu, X, Twitter, Mail, Phone,  Send, Github, Code, ExternalLink, CheckCircle, AlertCircle, MessageSquare, Sparkles } from 'lucide-react';
 import { Section } from '@/components/ui/Section';
 import { Card } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
@@ -69,9 +69,9 @@ export default function Contact() {
 
   const socialIconMap = {
     github: Github,
-    codeforces: Code,
-    icpc: ExternalLink,
-    linkedin: ExternalLink,
+    twitter: Twitter,
+    facebook: Facebook,
+    linkedin: Linkedin,
   };
 
   const onSubmit = async (data: ContactFormData) => {
@@ -268,7 +268,7 @@ export default function Contact() {
                     type="text"
                     id="name"
                     className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-700 rounded-lg text-zinc-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                    placeholder="John Doe"
+                    placeholder="Hossam Saber"
                     disabled={isSubmitting}
                   />
                   {errors.name && (
@@ -286,7 +286,7 @@ export default function Contact() {
                     type="email"
                     id="email"
                     className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-700 rounded-lg text-zinc-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                    placeholder="john@example.com"
+                    placeholder="hosssam.sabeer@gmail.com"
                     disabled={isSubmitting}
                   />
                   {errors.email && (

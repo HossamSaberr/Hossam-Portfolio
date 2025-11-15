@@ -4,7 +4,7 @@ export const portfolioData: PortfolioData = {
   personalInfo: {
     name: "Hossam Saber",
     title: "Competitive Programmer & Software Developer",
-    tagline: "ACPC Finalist, ICPC Problem Setter & Software Developer passionate about algorithmic problem solving and mentoring",
+    tagline: "ACCPC Finalist, ICPC Problem Setter & Software Developer passionate about algorithmic problem solving and mentoring.",
     email: "hosssam.saberr@gmail.com",
     phone: "+201140945716",
     location: "Egypt",
@@ -17,7 +17,7 @@ export const portfolioData: PortfolioData = {
     statistics: [
       { label: "Algorithmic Problems Solved", value: "4000+" },
       { label: "Competitive Programming Rankings", value: "5+" },
-      { label: "Students Mentored", value: "500+" },
+      { label: "Students Mentored", value: "2500+" },
       { label: "Leadership Positions", value: "3+" }
     ]
   },
@@ -43,11 +43,11 @@ export const portfolioData: PortfolioData = {
       id: 1,
       title: "Library Management System",
       description: "Comprehensive library management application with book tracking, member management, and user-friendly GUI built using Java Swing and object-oriented programming principles.",
-      technologies: ["Java", "OOP", "GUI (Java Swing)"],
+      technologies: ["Java", "OOP", "GUI (Java Swing)", "In-Memory Storage"],
       features: ["Book management system", "Member tracking", "User-friendly interface", "Database integration"],
       image: "/projects/library-management.svg",
-      githubUrl: "https://github.com/HossamSaberr/library-management",
-      liveUrl: null
+      githubUrl: "https://github.com/HossamSaberr/LibraryManagementSystem",
+      liveUrl: "https://github.com/HossamSaberr/LibraryManagementSystem"
     },
     {
       id: 2,
@@ -56,14 +56,14 @@ export const portfolioData: PortfolioData = {
       technologies: ["HTML", "CSS", "Responsive Design", "JavaScript"],
       features: ["Multiple sections", "Responsive layout", "Contact form", "Professional animations"],
       image: "/projects/portfolio-website.svg",
-      githubUrl: "https://github.com/HossamSaberr/portfolio",
+      githubUrl: "https://github.com/HossamSaberr/Hossam-Portfolio",
       liveUrl: "https://hossamsaberr.dev"
     },
     {
       id: 3,
       title: "ICPC Menofia Community Website",
       description: "Official community website featuring training resources, events, and competitive programming content to support and grow the programming community.",
-      technologies: ["Material for MkDocs", "Markdown", "Git"],
+      technologies: ["Markdown", "Git"],
       features: ["Training plans", "Event recordings", "Resource library", "Community forums"],
       image: "/projects/icpc-community.svg",
       githubUrl: "https://github.com/ICPC-Menofia/community-website",
@@ -73,8 +73,22 @@ export const portfolioData: PortfolioData = {
   experience: [
     {
       id: 1,
+      organization: "ICPC Menofia Community",
+      role: "Development Team Leader & Problem Setter",
+      duration: "2024 - Present",
+      achievements: [
+        "Mentored 2500+ trainees in competitive programming",
+        "Designed contests and learning paths",
+        "Created 50+ original programming problems",
+        "Led technical development initiatives",
+        "Organized hackathons and coding competitions"
+      ],
+      technologies: ["Competitive Programming", "Problem Setting", "Mentoring", "Technical Leadership"]
+    },
+    {
+      id: 2,
       organization: "Compiler Community",
-      role: "Social Media Team Leader → Community Leader",
+      role: "Community Leader",
       duration: "2023 - Present",
       achievements: [
         "Organized scientific events with top industry speakers",
@@ -84,20 +98,6 @@ export const portfolioData: PortfolioData = {
         "Established partnerships with tech companies"
       ],
       technologies: ["Community Management", "Teaching", "Event Planning", "Social Media Strategy"]
-    },
-    {
-      id: 2,
-      organization: "ICPC Menofia Community",
-      role: "Development Team Leader & Problem Setter",
-      duration: "2024 - Present",
-      achievements: [
-        "Mentored 500+ trainees in competitive programming",
-        "Designed contests and learning paths",
-        "Created 50+ original programming problems",
-        "Led technical development initiatives",
-        "Organized hackathons and coding competitions"
-      ],
-      technologies: ["Competitive Programming", "Problem Setting", "Mentoring", "Technical Leadership"]
     }
   ],
   achievements: [
@@ -113,7 +113,7 @@ export const portfolioData: PortfolioData = {
       platform: "TCPC & SCPC",
       date: "2025",
       description: "Created original problems for regional programming contests",
-      url: null
+      url: ""
     },
     {
       title: "Codeforces Expert",
@@ -134,13 +134,13 @@ export const portfolioData: PortfolioData = {
       platform: "Multiple Platforms",
       date: "Ongoing",
       description: "Successfully solved 4000+ algorithmic programming problems",
-      url: null
+      url: ""
     }
   ],
   socialLinks: [
     { name: "GitHub", url: "https://github.com/HossamSaberr", icon: "github" },
-    { name: "Codeforces", url: "https://codeforces.com/profile/Homz", icon: "codeforces" },
-    { name: "ICPC Profile", url: "https://icpc.global/ICPCID/WCMZYVG0D2Q9", icon: "icpc" },
+    { name: "Twitter", url: "https://x.com/__Homzz", icon: "twitter" },
+    { name: "Facebook", url: "https://www.facebook.com/hossam.saber.198778/", icon: "facebook" },
     { name: "LinkedIn", url: "https://linkedin.com/in/hossamsaberr", icon: "linkedin" }
   ]
 };

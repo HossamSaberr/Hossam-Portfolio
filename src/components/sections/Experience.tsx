@@ -132,8 +132,9 @@ export default function Experience() {
             <motion.div
               key={exp.id}
               className={`relative mb-12 ${
-                index % 2 === 0 ? 'md:pr-8 md:text-right' : 'md:pl-8 md:ml-auto md:w-1/2'
+                'md:pr-8 md:text-left' 
               }`}
+              //
               variants={itemVariants}
               custom={index}
             >

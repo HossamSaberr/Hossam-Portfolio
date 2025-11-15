@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Code, Cpu, Brain, Zap, Database, Monitor, Users, MessageSquare } from 'lucide-react';
+import { Code, Cpu, Brain, Zap, Database, Monitor, Users, MessageSquare, Code2 , Coffee, BadgePlus} from 'lucide-react';
 import { Section } from '@/components/ui/Section';
 import { Card } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
@@ -62,13 +62,13 @@ export default function Skills() {
   };
 
   const iconMap: Record<string, React.ReactNode> = {
-    'C++': <Code size={24} />,
-    'Java': <Cpu size={24} />,
+    'C++': <Code2 size={24} />,
+    'Java': <Coffee size={24} />,
     'Data Structures & Algorithms': <Brain size={24} />,
     'Object-Oriented Programming': <Database size={24} />,
     'Problem Solving': <Zap size={24} />,
     'GUI Development': <Monitor size={24} />,
-    'Web Design': <Code size={24} />,
+    'Web Design': <Code2 size={24} />,
     'Team Leadership': <Users size={24} />,
     'Technical Communication': <MessageSquare size={24} />,
   };
@@ -104,9 +104,9 @@ export default function Skills() {
   };
 
   const categoryIcons = {
-    languages: <Code size={28} className="text-blue-400" />,
+    languages: <Code2 size={28} className="text-blue-400" />,
     concepts: <Brain size={28} className="text-purple-400" />,
-    other: <Zap size={28} className="text-yellow-400" />,
+    other: <BadgePlus size={28} className="text-yellow-400" />,
   };
 
   const categoryTitles = {

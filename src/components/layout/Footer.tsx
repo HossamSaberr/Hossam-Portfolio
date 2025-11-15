@@ -2,10 +2,10 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Github, Code, ExternalLink, Mail, Phone, ArrowUp } from 'lucide-react';
+import { Github, Mail, ExternalLink, SparklesIcon, Twitter, Code2 , Linkedin, MailIcon, Phone, ArrowUp, Facebook } from 'lucide-react';
 import { portfolioData } from '@/data/portfolio';
 import { smoothScroll } from '@/utils/animation';
-import { Variants } from "framer-motion";
+import { Variants, easeOut, easeInOut } from "framer-motion";
 
 
 export default function Footer() {
@@ -26,9 +26,9 @@ export default function Footer() {
 
   const socialIconMap = {
     github: Github,
-    codeforces: Code,
-    icpc: ExternalLink,
-    linkedin: ExternalLink,
+    twitter: Twitter,
+    facebook: Facebook,
+    linkedin: Linkedin,
   };
 
   const footerVariants: Variants = {
@@ -38,7 +38,7 @@ export default function Footer() {
     y: 0,
     transition: {
       duration: 0.5,
-      ease: "easeInOut",
+      ease: easeInOut,
     },
   },
 };
@@ -52,7 +52,7 @@ const backToTopVariants: Variants = {
     y: 0,
     transition: {
       duration: 0.5,
-      ease: "easeInOut", 
+      ease: easeInOut, 
     },
   },
   hover: {

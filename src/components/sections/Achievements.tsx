@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Trophy, Award, Target, ExternalLink, Star, Medal, Crown, Code } from 'lucide-react';
+import { Trophy, Award, Target, ExternalLink, Star, Medal, Crown, Code, Code2 } from 'lucide-react';
 import { Section } from '@/components/ui/Section';
 import { PlatformBadge, AchievementBadge } from '@/components/ui/Badge';
 import { portfolioData } from '@/data/portfolio';
@@ -72,7 +72,7 @@ export default function Achievements() {
       case 'Problem Setter':
         return <Target size={24} className="text-purple-400" />;
       case 'Codeforces Expert':
-        return <Code size={24} className="text-red-400" />;
+        return <Code2 size={24} className="text-red-400" />;
       case 'AtCoder Cyan':
         return <Award size={24} className="text-blue-400" />;
       case '4000+ Problems Solved':
@@ -99,7 +99,7 @@ export default function Achievements() {
 
   const getRatingDisplay = (achievement: any) => {
     if (achievement.platform === 'Codeforces') {
-      return '1600+';
+      return '1800+';
     }
     if (achievement.platform === 'AtCoder') {
       return '1200+';
@@ -135,9 +135,9 @@ export default function Achievements() {
                 variants={starVariants}
                 custom={0}
               >
-                5+
+                50+
               </motion.div>
-              <p className="text-sm text-zinc-400 mt-1">Major Platforms</p>
+              <p className="text-sm text-zinc-400 mt-1">Original Problems</p>
             </div>
             <div className="text-center">
               <motion.div
@@ -165,7 +165,7 @@ export default function Achievements() {
                 variants={starVariants}
                 custom={3}
               >
-                2025
+                1
               </motion.div>
               <p className="text-sm text-zinc-400 mt-1">ACPC Finalist</p>
             </div>
@@ -307,7 +307,7 @@ export default function Achievements() {
                   Problem Setting Excellence
                 </h4>
                 <p className="text-sm text-zinc-400">
-                  Created original problems for major regional contests including TCPC and SCPC
+                  Created original problems for Arab major regional contests including TCPC, PCPC and SCPC
                 </p>
               </div>
             </motion.div>
