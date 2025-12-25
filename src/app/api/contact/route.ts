@@ -76,16 +76,13 @@ export async function POST(request: NextRequest) {
     const emailResult = await sendContactEmail(sanitizedData);
 
     if (!emailResult.success) {
-      console.error('Email sending failed:', emailResult.message);
+      console.error('[Contact Form] Email sending failed:', emailResult.message);
       return NextResponse.json(
         {
           success: false,
-          error: 'Failed to send message. Please try again later.',
+          error: emailResult.message || 'Failed to send message. Please try again later.',
         },
-        {
-          status: 500,
-          headers: RATE_LIMIT_HEADERS,
-        }
+        { status: 500, headers: RATE_LIMIT_HEADERS }
       );
     }
 

@@ -2,11 +2,11 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Github, ExternalLink, Code } from 'lucide-react';
+import { Menu, X, Github, ExternalLink, SparklesIcon , Code2 , Linkedin, Mail, Phone, ArrowUp } from 'lucide-react';
 import { navigationItems } from '@/data/portfolio';
 import { useScrollspy } from '@/components/hooks/useScrollspy';
 import { smoothScroll } from '@/utils/animation';
-import { Variants } from "framer-motion";
+import { Variants, easeOut, easeInOut } from "framer-motion";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -154,13 +154,13 @@ const headerVariants: Variants = {
                 <Github size={18} />
               </a>
               <a
-                href="https://codeforces.com/profile/Homz"
+                href="https://www.linkedin.com/in/hossam-saberr/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors"
-                aria-label="Codeforces Profile"
+                aria-label="Linkedin Profile"
               >
-                <Code size={18} />
+                <Linkedin size={18} />
               </a>
             </div>
 
@@ -288,7 +288,7 @@ const headerVariants: Variants = {
                     className="p-3 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors"
                     aria-label="Codeforces Profile"
                   >
-                    <Code size={20} />
+                    <Code2 size={20} />
                   </a>
                   <a
                     href="https://icpc.global/ICPCID/WCMZYVG0D2Q9"

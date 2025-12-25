@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap, Target, Users, Code, Award, Lightbulb } from 'lucide-react';
+import { GraduationCap, Target, Users, Code2, Award, Lightbulb } from 'lucide-react';
 import { Section } from '@/components/ui/Section';
 import { Card } from '@/components/ui/Card';
 import { portfolioData } from '@/data/portfolio';
@@ -54,7 +54,7 @@ export default function About() {
   }, []);
 
   const iconMap = {
-    'Algorithmic Problems Solved': Code,
+    'Algorithmic Problems Solved': Code2,
     'Competitive Programming Rankings': Award,
     'Students Mentored': Users,
     'Leadership Positions': Target,
@@ -135,7 +135,7 @@ export default function About() {
                 </div>
 
                 <blockquote className="text-zinc-300 italic border-l-4 border-blue-500 pl-4">
-                  "Every problem is an opportunity to learn..."
+                  "If You Aim At Nothing, You Hit Nothing..."
                 </blockquote>
               </Card>
             </motion.div>
@@ -190,7 +190,7 @@ export default function About() {
                 <h4 className="text-xl font-semibold text-zinc-100 mb-4">Community Impact</h4>
 
                 <div className="space-y-4">
-                  <p className="text-zinc-300">Mentored 500+ students</p>
+                  <p className="text-zinc-300">Mentored 2500+ students</p>
                   <p className="text-zinc-300">Created 50+ programming problems</p>
                   <p className="text-zinc-300">Organized scientific events</p>
                   <p className="text-zinc-300">Grew community engagement by 300%</p>

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Code2, Trophy, Users, ArrowDown, Github, ExternalLink, Sparkles, Terminal } from 'lucide-react';
+import { Code2, Trophy, Users, ArrowDown, Github, ExternalLink, Sparkles, Linkedin, Facebook } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
 import { portfolioData } from '@/data/portfolio';
@@ -179,15 +179,15 @@ export default function Hero() {
               >
                 <Badge variant="codeforces" size="md">
                   <Trophy size={14} className="mr-1" />
-                  Codeforces Expert
+                  ACPC Finalist
                 </Badge>
                 <Badge variant="acpc" size="md">
                   <Sparkles size={14} className="mr-1" />
-                  ACPC Finalist
+                  Codeforces Expert 
                 </Badge>
                 <Badge variant="default" size="md">
                   <Users size={14} className="mr-1" />
-                  500+ Mentored
+                  2500+ Mentored
                 </Badge>
               </motion.div>
 
@@ -203,11 +203,19 @@ export default function Hero() {
                   onClick={() => smoothScroll('projects')}
                   className="group"
                 >
-                  View Projects
-                  <ArrowDown
-                    size={18}
-                    className="ml-2 group-hover:translate-y-1 transition-transform"
-                  />
+                  <span className="inline-flex items-center gap-2">
+                    View Projects
+                    <motion.span
+                      animate={{ y: [0, 3, 0] }} 
+                      transition={{
+                        duration: 1.0,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                      }}
+                    >
+                      <ArrowDown size={18} />
+                    </motion.span>
+                  </span>
                 </Button>
                 <Button
                   variant="secondary"
@@ -235,24 +243,24 @@ export default function Hero() {
                   <span className="text-sm">GitHub</span>
                 </a>
                 <a
-                  href="https://codeforces.com/profile/Homz"
+                  href="https://www.linkedin.com/in/hossam-saberr/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 text-zinc-400 hover:text-blue-400 transition-colors group"
                   aria-label="Codeforces Profile"
                 >
-                  <Terminal size={18} className="group-hover:scale-110 transition-transform" />
-                  <span className="text-sm">Codeforces</span>
+                  <Linkedin size={18} className="group-hover:scale-110 transition-transform" />
+                  <span className="text-sm">Linkedin</span>
                 </a>
                 <a
-                  href="https://icpc.global/ICPCID/WCMZYVG0D2Q9"
+                  href="https://www.facebook.com/hossam.saber.198778/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 text-zinc-400 hover:text-blue-400 transition-colors group"
-                  aria-label="ICPC Profile"
+                  aria-label="Facebook Profile"
                 >
-                  <ExternalLink size={18} className="group-hover:scale-110 transition-transform" />
-                  <span className="text-sm">ICPC</span>
+                  <Facebook size={18} className="group-hover:scale-110 transition-transform" />
+                  <span className="text-sm">Facebook</span>
                 </a>
               </motion.div>
             </motion.div>
@@ -302,7 +310,7 @@ export default function Hero() {
                       <span className="text-yellow-400">int</span> {` main() {`}
                     </motion.div>
                     <motion.div variants={codeLineVariants} className="ml-4 text-green-400">
-                      solve();
+                      Homz();
                     </motion.div>
                     <motion.div variants={codeLineVariants} className="ml-4 text-cyan-400">
                       <span className="text-gray-400">// Problems solved: 4000+</span>
@@ -317,7 +325,7 @@ export default function Hero() {
                       <span className="text-yellow-400">return</span> <span className="text-green-400">0</span>;
                     </motion.div>
                     <motion.div variants={codeLineVariants} className="text-blue-400">
-                      `{'}'}`
+                      {'}'}
                     </motion.div>
                   </div>
                 </motion.div>
@@ -358,7 +366,7 @@ export default function Hero() {
 
           {/* Scroll Indicator */}
           <motion.div
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+            className="absolute left-1/2 transform -translate-x-1/2"
             variants={itemVariants}
             transition={{ delay: 1.2 }}
           >
