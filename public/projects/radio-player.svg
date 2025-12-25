@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a855f7;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:0.2" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="#18181b"/>
+  <rect x="50" y="40" width="300" height="220" rx="10" fill="url(#bgGrad)" stroke="#a855f7" stroke-width="2"/>
+  <circle cx="200" cy="130" r="50" fill="#27272a" stroke="#a855f7" stroke-width="3"/>
+  <polygon points="185,110 185,150 220,130" fill="#a855f7"/>
+  <rect x="80" y="200" width="240" height="8" rx="4" fill="#27272a"/>
+  <rect x="80" y="200" width="160" height="8" rx="4" fill="#a855f7"/>
+  <text x="80" y="235" fill="#71717a" font-family="sans-serif" font-size="10">Now Playing: Radio Station</text>
+  <text x="80" y="255" fill="#a855f7" font-family="monospace" font-size="12">30,000+ Stations</text>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f97316;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#eab308;stop-opacity:0.2" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="#18181b"/>
+  <rect x="50" y="40" width="300" height="220" rx="10" fill="url(#bgGrad)" stroke="#f97316" stroke-width="2"/>
+  <rect x="70" y="60" width="260" height="30" rx="5" fill="#27272a"/>
+  <text x="80" y="82" fill="#f97316" font-family="monospace" font-size="14">Point of Sale System</text>
+  <rect x="70" y="110" width="80" height="80" rx="8" fill="#27272a" stroke="#3f3f46" stroke-width="1"/>
+  <text x="85" y="155" fill="#71717a" font-family="sans-serif" font-size="10">Product</text>
+  <rect x="160" y="110" width="80" height="80" rx="8" fill="#27272a" stroke="#3f3f46" stroke-width="1"/>
+  <text x="180" y="155" fill="#71717a" font-family="sans-serif" font-size="10">Sales</text>
+  <rect x="250" y="110" width="80" height="80" rx="8" fill="#27272a" stroke="#3f3f46" stroke-width="1"/>
+  <text x="265" y="155" fill="#71717a" font-family="sans-serif" font-size="10">Invoice</text>
+  <rect x="70" y="210" width="260" height="35" rx="5" fill="#f97316"/>
+  <text x="160" y="232" fill="white" font-family="sans-serif" font-size="12" font-weight="bold">Process Sale</text>
+</svg>

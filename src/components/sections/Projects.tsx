@@ -73,18 +73,21 @@ export default function Projects() {
     'Git': <GitPullRequestArrow size={20} />,
   };
 
-  const projectColors = {
-    'Library Management System': 'from-blue-500/20 to-cyan-500/20 border-blue-500/30',
-    'Personal Portfolio Website': 'from-purple-500/20 to-pink-500/20 border-purple-500/30',
+  const projectColors: Record<string, string> = {
+    'Point of Sale System': 'from-orange-500/20 to-yellow-500/20 border-orange-500/30',
+    'Radio Player Application': 'from-purple-500/20 to-pink-500/20 border-purple-500/30',
+    'MUFCI ChatBot': 'from-cyan-500/20 to-blue-500/20 border-cyan-500/30',
     'ICPC Menofia Community Website': 'from-green-500/20 to-emerald-500/20 border-green-500/30',
   };
 
   const getProjectIcon = (title: string) => {
     switch (title) {
-      case 'Library Management System':
-        return <Book size={24} className="text-blue-400" />;
-      case 'Personal Portfolio Website':
-        return <Globe size={24} className="text-purple-400" />;
+      case 'Point of Sale System':
+        return <Monitor size={24} className="text-orange-400" />;
+      case 'Radio Player Application':
+        return <Code2 size={24} className="text-purple-400" />;
+      case 'MUFCI ChatBot':
+        return <Globe size={24} className="text-cyan-400" />;
       case 'ICPC Menofia Community Website':
         return <Users size={24} className="text-green-400" />;
       default:
@@ -313,35 +316,35 @@ export default function Projects() {
         </div>
 
         {/* Call to Action */}
-          <motion.div
-            className="text-center mt-16"
-            variants={itemVariants}
-            transition={{ delay: 0.6 }}
-            >
-            <div className="inline-flex flex-row items-center gap-4 p-6 bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-xl">
-              <div className="flex items-center space-x-3">
-                <Github size={24} className="text-blue-400" />
-                <span className="text-zinc-300">
-                  Interested in seeing more projects?
-                </span>
-              </div>
-
-              <Button variant="outline" size="md" className="group">
-                <a
-                  href="https://github.com/HossamSaberr"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center"
-                >
-                  Visit My GitHub
-                  <ExternalLink
-                    size={16}
-                    className="ml-2 group-hover:translate-x-1 transition-transform"
-                  />
-                </a>
-              </Button>
+        <motion.div
+          className="text-center mt-16"
+          variants={itemVariants}
+          transition={{ delay: 0.6 }}
+        >
+          <div className="inline-flex flex-row items-center gap-4 p-6 bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-xl">
+            <div className="flex items-center space-x-3">
+              <Github size={24} className="text-blue-400" />
+              <span className="text-zinc-300">
+                Interested in seeing more projects?
+              </span>
             </div>
-          </motion.div>
+
+            <Button variant="outline" size="md" className="group">
+              <a
+                href="https://github.com/HossamSaberr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center"
+              >
+                Visit My GitHub
+                <ExternalLink
+                  size={16}
+                  className="ml-2 group-hover:translate-x-1 transition-transform"
+                />
+              </a>
+            </Button>
+          </div>
+        </motion.div>
       </motion.div>
     </Section>
   );

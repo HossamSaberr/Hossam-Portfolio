@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:0.2" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="#18181b"/>
+  <rect x="50" y="40" width="300" height="220" rx="10" fill="url(#bgGrad)" stroke="#06b6d4" stroke-width="2"/>
+  <rect x="70" y="60" width="260" height="30" rx="5" fill="#27272a"/>
+  <text x="80" y="82" fill="#06b6d4" font-family="monospace" font-size="14">MUFCI ChatBot</text>
+  <rect x="70" y="110" width="180" height="25" rx="12" fill="#27272a"/>
+  <text x="85" y="128" fill="#71717a" font-family="sans-serif" font-size="11">What is my GPA?</text>
+  <rect x="130" y="145" width="200" height="35" rx="12" fill="#06b6d4"/>
+  <text x="145" y="168" fill="white" font-family="sans-serif" font-size="11">Your GPA is 3.2/4.0 🎓</text>
+  <rect x="70" y="195" width="160" height="25" rx="12" fill="#27272a"/>
+  <text x="85" y="213" fill="#71717a" font-family="sans-serif" font-size="11">Tell me about credits</text>
+  <rect x="270" y="220" width="60" height="25" rx="12" fill="#3b82f6"/>
+  <text x="285" y="238" fill="white" font-family="sans-serif" font-size="10">Send</text>
+</svg>

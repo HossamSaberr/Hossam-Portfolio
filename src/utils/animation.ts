@@ -48,12 +48,18 @@ export function useTypewriter(
   const [isComplete, setIsComplete] = useState(false);
 
   useEffect(() => {
+    // Reset state when text changes
+    setDisplayedText('');
+    setIsComplete(false);
+
+    if (!text) return;
+
     const timer = setTimeout(() => {
       let currentIndex = 0;
       const interval = setInterval(() => {
         if (currentIndex < text.length) {
-          setDisplayedText((prev) => prev + text[currentIndex]);
           currentIndex++;
+          setDisplayedText(text.slice(0, currentIndex));
         } else {
           setIsComplete(true);
           clearInterval(interval);
